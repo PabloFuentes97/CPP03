@@ -53,6 +53,8 @@
 
 	void ScavTrap::guardGate()
 	{
+		if (this->_hitPoints <= 0)
+			return ;
 		if (this->_gateKeeper == false)
 		{
 			std::cout << COLOR_S << "ScavTrap " << this->_name << " is now in Gate keeper mode" << RESET_S << std::endl;

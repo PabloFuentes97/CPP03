@@ -53,14 +53,13 @@
 		return (this->_name);
 	}
 
-	std::ostream &operator<<(std::ostream &o, const DiamondTrap &src)
+	std::ostream &operator<<(std::ostream &o, DiamondTrap &src)
 	{
-		DiamondTrap &d = const_cast<DiamondTrap &>(src);
-		ClapTrap &srcC = dynamic_cast<ClapTrap &>(d);
-		
+		ClapTrap &srcC = dynamic_cast<ClapTrap &>(src);
+
 		o << srcC << std::endl;
 		o << COLOR_D;
-		o << "Diamond Trap name: " << src.getName() << std::endl;
+		o << "Diamond Trap name: " << src.getName();
 		o << RESET_D;
 		return (o);
 	}

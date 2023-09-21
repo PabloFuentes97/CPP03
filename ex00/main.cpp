@@ -6,6 +6,9 @@ int	main(void)
 	ClapTrap	ct2("pedro");
 	ClapTrap	ct3(ct);
 
+	std::cout << "CT: \n" << ct << std::endl;
+	std::cout << "CT2: \n" << ct2 << std::endl;
+	std::cout << "CT3: \n" << ct3 << std::endl;
 	ct.attack("pepe");
 	ct.takeDamage(5);
 	ct.beRepaired(2);
@@ -18,6 +21,8 @@ int	main(void)
 	ct.beRepaired(1);
 	ct.attack("manuel");
 	ct2 = ct;
+	std::cout << "CT: \n" << ct2 << std::endl;
+	std::cout << "CT2: \n" << ct2 << std::endl;
 	ct2.takeDamage(6);
 	ct3.attack("jose");
 	

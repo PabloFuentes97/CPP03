@@ -41,5 +41,6 @@
 
 	void FragTrap::highFivesGuys(void)
 	{
-		std::cout << COLOR_F << "FragTrap " << this->_name << " requests a high fives!" << RESET_F << std::endl;
+		if (this->_hitPoints <= 0)
+			std::cout << COLOR_F << "FragTrap " << this->_name << " requests a high fives!" << RESET_F << std::endl;
 	}

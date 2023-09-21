@@ -44,7 +44,7 @@
 
 	void ScavTrap::attack(const std::string& target)
 	{
-		if (this->_hitPoints < 0 || this->_energyPoints < 0)
+		if (this->_hitPoints <= 0 || this->_energyPoints <= 0)
 			return ;
 		std::cout << COLOR_S << "ScavTrap " << this->_name << " attacks " << target << ", causing "
 			<< this->_attackDamage << " points of damage!" << RESET_S << std::endl;
@@ -53,6 +53,8 @@
 
 	void ScavTrap::guardGate()
 	{
+		if (this->_hitPoints <= 0)
+			return ;
 		if (this->_gateKeeper == false)
 		{
 			std::cout << COLOR_S << "ScavTrap " << this->_name << " is now in Gate keeper mode" << RESET_S << std::endl;
